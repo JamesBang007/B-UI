@@ -133,6 +133,7 @@ select:-webkit-autofill {
 @font-face {
   font-family: "iconfont";
   src: url('//at.alicdn.com/t/font_677690_1adz8am6p2s.ttf') format('truetype');
+  
   /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
 }
 .iconfont {
@@ -141,8 +142,8 @@ select:-webkit-autofill {
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: all .3s ease 0s;
+  transition: all .3s ease 0s;
 }
 .icon-unfold:before {
   content: "\e661";
@@ -244,8 +245,8 @@ select:-webkit-autofill {
   z-index: 1000;
   width: 100%;
   text-align: center;
-  transition: all 0.3s;
-  opacity: 0.1;
+  transition: all .3s;
+  opacity: .1;
 }
 #message span {
   display: inline-block;
