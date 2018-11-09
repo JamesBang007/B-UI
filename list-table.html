@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+<title>图文表格</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<script src="static/js/config.js"></script>
+<link rel="stylesheet" href="static/css/app.css" />
+</head>
+<body>
+
+<header class="bui-bar bui-bar-nav">
+<div class="bui-title">图文表格</div>
+</header>
+
+<div class="bui-main" id="app">
+
+    <section class="bui-box">
+        <div class="hd">
+            <h2 class="tit">成都旅游景点</h2>
+        </div>
+        <ul class="bui-table-view">
+            <li class="table-item" v-for="item in showData">
+                <a href="#" target="_blank">
+                    <img :src="item.pic" alt="" />
+                    <h3 class="title">{{item.name}}</h3>
+                    <p class="desc">{{item.desc}}</p>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+</div>
+
+<footer>
+    James邦 版权所有
+</footer>
+
+<script src="static/js/app.js?v0813"></script>
+<script src="static/js/vue.js"></script>
+<script src="static/js/jquery.min.js"></script>
+<script>
+var vm = new Vue( {
+    el: "#app",
+    data: {
+        loading: true,
+        publish: false, //是否操作接口
+        message: {
+            "text": '消息提示',
+            "show": false
+        },
+        showData: [
+            {"id":"104","name":"宽窄巷子","desc":"宽窄巷子，成都最具特色的街道，体验地道成都休闲生活的绝佳地点","pic":"http://p2-q.mafengwo.net/s8/M00/3D/B5/wKgBpVU2XxqAfdwMAAwnTv510Gc69.jpeg","poiid":"87950","pid":"101"},{"id":"105","name":"成都大熊猫繁育研究基地","desc":"成都大熊猫繁育研究基地，距离成都市区最近的大熊猫基地，可与熊猫亲密接触","pic":"http://p4-q.mafengwo.net/s5/M00/29/95/wKgB3FCm-xCAUnleABhA31ghiP401.jpeg","poiid":"5015","pid":"101"},{"id":"107","name":"锦里","desc":"锦里，西蜀历史上最古老的街道之一，被誉为“西蜀第一街”","pic":"http://c2-q.mafengwo.net/s8/M00/4A/54/wKgBpVVevFiAJoD3AA5T3y-GF3E03.jpeg","poiid":"1242","pid":"101"},{"id":"109","name":"春熙路","desc":"春熙路，相当于成都的中心街区，也是成都最古老最繁华的商业街道之一","pic":"http://n1-q.mafengwo.net/s6/M00/10/89/wKgB4lNSTheAG8uXAANwK987G-Q34.jpeg","poiid":"5433363","pid":"101"},{"id":"115","name":"武侯祠","desc":"武侯祠，中国惟一的君臣合祀祠庙，诸葛亮、刘备及蜀汉英雄纪念地","pic":"http://n4-q.mafengwo.net/s7/M00/34/A7/wKgB6lO7XJCABO_ZABR1JM5oc5M15.jpeg","poiid":"1241","pid":"101"},{"id":"135","name":"人民公园","desc":"人民公园，最能体验成都人民悠闲生活的免费公园，当地传统喝茶好去处","pic":"http://b3-q.mafengwo.net/s5/M00/08/E7/wKgB3FF_4JeAFr76AAu4WfYt9rE17.jpeg","poiid":"5416","pid":"101"},{"id":"145","name":"青羊宫","desc":"青羊宫，被誉为“川西第一道观”","pic":"http://p1-q.mafengwo.net/s5/M00/71/27/wKgB3FG8XAKAOVcBABIwBj4eZf087.jpeg","poiid":"5002","pid":"101"},{"id":"167","name":"东郊记忆","desc":"东郊记忆，成都文艺青年钟爱地之一，有张靓颖、李宇春、姜文等人手模墙","pic":"http://p1-q.mafengwo.net/s5/M00/90/9F/wKgB3FEOdYuAJSuUACGM1QGF0OM13.jpeg","poiid":"8469443","pid":"101"},{"id":"170","name":"浣花溪公园","desc":"浣花溪公园，成都市面积最大的免费公园，也被评为市内唯一的五星级公园","pic":"http://b1-q.mafengwo.net/s5/M00/92/5F/wKgB3FEaJW2AcbWhAE6gF25r87U76.jpeg","poiid":"5080","pid":"101"},{"id":"177","name":"九眼桥","desc":"九眼桥，这是成都历史建筑景点之一，现在也是成都夜生活的集中地，晚上的景色尤为漂亮","pic":"http://c4-q.mafengwo.net/s6/M00/13/0E/wKgB4lMImtOANdQ1AAf3NQd8gUs22.jpeg","poiid":"7795","pid":"101"}
+        ]
+    },
+    beforeMount: function () {
+        //console.log("在挂载开始之前被调用");
+        var that = this;
+    },
+    methods: {
+
+    }
+} );
+</script>
+</body>
+</html>
